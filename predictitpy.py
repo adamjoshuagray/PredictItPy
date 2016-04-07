@@ -1,10 +1,7 @@
-import json
-import urllib2
-from dateutil import parser
 
 __author__ = 'Adam J. Gray'
 
-ROOT_URL = 'https://www.predictit.org/api/marketdata/ticker/'
+__ROOT_URL = 'https://www.predictit.org/api/marketdata/ticker/'
 
 
 def get_market(market_ticker):
@@ -19,7 +16,9 @@ def get_market(market_ticker):
     :return:
         A dict for the whole market.
     """
-    url = ROOT_URL + market_ticker
+    import urllib2
+    import json
+    url = __ROOT_URL + market_ticker
     f = urllib2.urlopen(url)
     parsed_data = json.loads(f.read())
     return parsed_data
@@ -52,6 +51,7 @@ def get_timestamp(market):
     :return:
         A datetime.datetime representing when the data in the market was valid.
     """
+    from dateutil import parser
     ts = parser.parse(market['TimeStamp'])
     return ts
 

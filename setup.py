@@ -7,5 +7,4 @@ setup(name='predictitpy',
       author='Adam J. Gray',
       author_email='adam.joshua.gray@gmail.com',
       license='MIT',
-      packages=['predictitpy'],
       zip_safe=False)
