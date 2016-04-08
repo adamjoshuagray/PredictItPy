@@ -49,6 +49,11 @@ and you should expect `get_contract` to return a dict which looks like:
     }
 ```
 
+### Client
+
+There is also a class `Client` which has essentially the same methods but handles caching of data for each
+contract and between markets.
+
 ## Installation
 
 ```

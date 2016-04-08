@@ -1,7 +1,8 @@
 from setuptools import setup
 
 setup(name='predictitpy',
-      version='0.1.1',
+      version='0.2',
+      py_modules=['predictitpy'],
       description='A very light wrapper around the PredictIt.org market data api.',
       url='https://github.com/adamjoshuagray/predictitpy',
       author='Adam J. Gray',
